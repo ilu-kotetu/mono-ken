@@ -84,14 +84,17 @@ The source may contain English strings that are translated through `MAE_I18n`. W
 
 ## Verification Expectations
 
-Run what is available in the environment:
+PHP has been installed for this project environment and should be used for syntax checks.
 
-- `php -l` on touched PHP files if PHP is installed.
+Run:
+
+- `php -v` first to confirm PHP is available.
+- `php -l` on every touched PHP file.
 - Search for old version strings.
 - Search for obvious mojibake in touched files.
 - Check ZIP contents after packaging.
 
-If PHP is not installed, say so in the final handoff and provide the checks that were performed instead.
+If `php` is not found, do not silently skip linting. Check whether the terminal/session needs to be restarted or whether PHP is missing from `PATH`. If it still cannot be run, say so in the final handoff and provide the checks that were performed instead.
 
 ## Packaging
 
@@ -111,4 +114,3 @@ Output ZIP naming example:
 ```text
 outputs/monoken-affiliate-engine-v0.15.0.zip
 ```
-
